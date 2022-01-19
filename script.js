@@ -4,6 +4,7 @@ const ctx = canvas.getContext("2d");
 const eachColors = document.querySelectorAll('.controls__color');
 const jsRange = document.querySelector('#jsRange');
 const mode = document.querySelector("#jsMode");
+const reset = document.querySelector("#jsReset");
 const INITIAL_COLOR = "#000000";
 
 canvas.width = 700;
@@ -77,6 +78,11 @@ function handleCanvas(){
     } 
 }
 
+//canvas 내용 지우기
+function clearCanvas(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 
 //함수 호출
 if(canvas){
@@ -92,4 +98,7 @@ if(jsRange){
 
 if(mode){
     mode.addEventListener("click", handleMode);
+}
+if(reset){
+    reset.addEventListener("click", clearCanvas);
 }
