@@ -8,6 +8,12 @@
 
 ## 📱 Preview
 
+![thumb_4](https://user-images.githubusercontent.com/39701029/150109914-5842ca4e-9c95-4049-b747-aea9d7951a41.jpg "width:20%")
+
+<br/>
+
+## 🖥 Demo
+- [Paint](https://hlpark0209.github.io/Paint-Js/)
 
 <br/>
 
@@ -16,7 +22,6 @@
 * HTML canvas
 * CSS    
 * JAVASCRIPT
-* canvas API 활용
 <br/>
 
 ## 📑 Functional List
@@ -27,6 +32,6 @@
 
 ## ☑️ Improvements
 
-* 
+* 지우개 기능 추가
 
 <br/>
