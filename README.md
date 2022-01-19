@@ -1,7 +1,7 @@
 # Paint-Js
 
-## 📅 Project Name : # Paint-Js
-* html canvas javascript로 만든 그림판 입니다.
+## 📅 Project Name : Paint-Js
+* html canvas, css, javascript로 만든 그림판 입니다.
 
 <br/>
 
