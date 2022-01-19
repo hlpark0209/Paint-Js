@@ -13,7 +13,7 @@
 <br/>
 
 ## 🖥 Demo
-- [Paint](https://hlpark0209.github.io/Paint-Js/)
+- [Paint](https://hlpark0209.github.io/Paint-Js/ "target=blank")
 
 <br/>
 
