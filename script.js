@@ -4,12 +4,14 @@ const ctx = canvas.getContext("2d");
 const eachColors = document.querySelectorAll('.controls__color');
 const jsRange = document.querySelector('#jsRange');
 const mode = document.querySelector("#jsMode");
+const INITIAL_COLOR = "#000000";
 
 canvas.width = 700;
 canvas.height = 700;
 
-ctx.strokeStyle = "#000000";
+ctx.strokeStyle = INITIAL_COLOR;
 ctx.lineWidth = 2.5;
+ctx.fillStyle = INITIAL_COLOR;
 
 let painting = false;
 let filling = false;
@@ -43,10 +45,10 @@ function onMouseDown(e){
 }
 
 //색상 변경
-
 function changeColor(e){
     const bgColor = e.target.style.backgroundColor;
     ctx.strokeStyle = bgColor;
+    ctx.fillStyle = bgColor;
 }
 Array.from(eachColors)
 .forEach(color => color.addEventListener("click", changeColor));
@@ -65,11 +67,15 @@ function handleMode(){
     }else{
         filling = true;
         mode.innerText = "Paint"
-        
     }
 }
 
-
+// canvas 클릭시 fill 적용
+function handleCanvas(){
+    if(filling){
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    } 
+}
 
 
 //함수 호출
@@ -78,6 +84,7 @@ if(canvas){
     canvas.addEventListener("mousedown", startPainting);
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting);
+    canvas.addEventListener("click", handleCanvas);
 }
 if(jsRange){
     jsRange.addEventListener('input', handleRange);
