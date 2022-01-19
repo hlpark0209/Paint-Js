@@ -1,6 +1,7 @@
 'use strict';
 const canvas = document.querySelector('#jsCanvas');
 const ctx = canvas.getContext("2d");
+const eachColors = document.querySelectorAll('.controls__color');
 canvas.width = 700;
 canvas.height = 700;
 
@@ -45,3 +46,13 @@ if(canvas){
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting);
 }
+
+
+function changeColor(e){
+    const bgColor = e.target.style.backgroundColor;
+    ctx.strokeStyle = bgColor;
+    console.log(bgColor);
+}
+
+Array.from(eachColors)
+.forEach(color => color.addEventListener("click", changeColor));
