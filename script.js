@@ -5,10 +5,15 @@ const eachColors = document.querySelectorAll('.controls__color');
 const jsRange = document.querySelector('#jsRange');
 const mode = document.querySelector("#jsMode");
 const reset = document.querySelector("#jsReset");
+const save = document.querySelector("#jsSave");
 const INITIAL_COLOR = "#000000";
 
 canvas.width = 700;
 canvas.height = 700;
+
+//load가 되면 bg가 white로 설정
+ctx.fillStyle = "#fff";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 ctx.strokeStyle = INITIAL_COLOR;
 ctx.lineWidth = 2.5;
@@ -82,6 +87,24 @@ function handleCanvas(){
 function clearCanvas(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
+//마우스 우클릭 금지
+function handleCM(e){
+    e.preventDefault();
+}
+
+//이미지 저장
+function handleSave(){
+    const imageSave = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.href = imageSave;
+    link.download = "PaintJS🎨";
+    console.log(link);
+    link.click();
+}
+
+
+
+
 
 
 //함수 호출
@@ -91,6 +114,7 @@ if(canvas){
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave", stopPainting);
     canvas.addEventListener("click", handleCanvas);
+    canvas.addEventListener("contextmenu", handleCM);
 }
 if(jsRange){
     jsRange.addEventListener('input', handleRange);
@@ -101,4 +125,7 @@ if(mode){
 }
 if(reset){
     reset.addEventListener("click", clearCanvas);
+}
+if(save){
+    save.addEventListener("click", handleSave);
 }
