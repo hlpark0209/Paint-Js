@@ -21,7 +21,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .controls__btns button{
     all: unset;
@@ -47,12 +47,12 @@ body{
 }
 
 .controls__range{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .controls__colors{
     display: flex;
-    margin-top: 50px;
+    margin: 30px 0px;
 }
 .controls__color{
     width:50px;

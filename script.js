@@ -104,9 +104,6 @@ function handleSave(){
 
 
 
-
-
-
 //함수 호출
 if(canvas){
     canvas.addEventListener("mousemove", onMouseMove);
