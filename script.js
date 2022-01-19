@@ -22,6 +22,9 @@ ctx.fillStyle = INITIAL_COLOR;
 let painting = false;
 let filling = false;
 
+
+
+
 // 그리기 중지
 function stopPainting(){
     painting = false;
