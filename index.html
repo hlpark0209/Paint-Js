@@ -9,36 +9,40 @@
     <title>Paint JS</title>
 </head>
 <body>
-    <canvas id="jsCanvas" class="canvas"></canvas>
-    <div class="controls">
-        <!-- range -->
-        <div class="controls__range">
-            <input
-            type="range"
-            id="jsRange"
-            min="0.1"
-            max="5.0"
-            value="2.5"
-            step="0.1">
+    <div class="wrap">
+        <canvas id="jsCanvas" class="canvas"></canvas>
+            <div class="controls">
+                <div class="controlsWrap">
+                    <!-- range -->
+                    <div class="controls__range">
+                        <input
+                        type="range"
+                        id="jsRange"
+                        min="0.1"
+                        max="5.0"
+                        value="2.5"
+                        step="0.1">
+                    </div>
+                    <!-- btns -->
+                    <div class="controls__btns">
+                        <button id="jsMode">FILL</button>
+                        <button id="jsReset">RESET</button>
+                        <button id="jsSave">SAVE</button>
+                    </div>
+                </div>
+            <!-- colors -->
+            <div class="controls__colors" id="colors">
+                <div class="controls__color" style="background-color: #000;"></div>
+                <div class="controls__color" style="background-color: #fff;"></div>
+                <div class="controls__color" style="background-color: rgb(228, 0, 0);"></div>
+                <div class="controls__color" style="background-color: rgb(241, 117, 0);"></div>
+                <div class="controls__color" style="background-color: rgb(255, 238, 0);"></div>
+                <div class="controls__color" style="background-color: rgb(72, 255, 0);"></div>
+                <div class="controls__color" style="background-color: rgb(0, 162, 255);"></div>
+                <div class="controls__color" style="background-color: rgb(25, 0, 255);"></div>
+                <div class="controls__color" style="background-color: rgb(221, 221, 221);"></div>
+            </div>   
         </div>
-        <!-- btns -->
-        <div class="controls__btns">
-            <button id="jsMode">FILL</button>
-            <button id="jsReset">RESET</button>
-            <button id="jsSave">SAVE</button>
-        </div>
-        <!-- colors -->
-        <div class="controls__colors" id="colors">
-            <div class="controls__color" style="background-color: #000;"></div>
-            <div class="controls__color" style="background-color: #fff;"></div>
-            <div class="controls__color" style="background-color: rgb(228, 0, 0);"></div>
-            <div class="controls__color" style="background-color: rgb(241, 117, 0);"></div>
-            <div class="controls__color" style="background-color: rgb(255, 238, 0);"></div>
-            <div class="controls__color" style="background-color: rgb(72, 255, 0);"></div>
-            <div class="controls__color" style="background-color: rgb(0, 162, 255);"></div>
-            <div class="controls__color" style="background-color: rgb(25, 0, 255);"></div>
-            <div class="controls__color" style="background-color: rgb(221, 221, 221);"></div>
-        </div>   
     </div>
 </body>
 </html>

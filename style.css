@@ -8,20 +8,32 @@ body{
     display: flex;
     flex-direction: column;
     align-items:center ;
+    box-sizing: border-box;
+}
+.wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 70px;
 }
 .canvas{
-    width: 700px;
+    width: 1000px;
     height: 700px;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-    margin-top: 50px;
 }
 .controls{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+}
+.controlsWrap{
+    display: flex;
+    flex-direction: column;
+}
+.controls__btns{
+    display: flex;
+    flex-direction: column;
 }
 .controls__btns button{
     all: unset;
@@ -31,7 +43,7 @@ body{
     height: 60px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-    margin: 0 10px;
+    margin: 15px 0px;
     text-align: center;
     font-size: 1.5em;
     transition: all 0.2s ease-in-out;
@@ -52,7 +64,8 @@ body{
 
 .controls__colors{
     display: flex;
-    margin: 30px 0px;
+    flex-direction: column;
+    margin-left:50px;
 }
 .controls__color{
     width:50px;

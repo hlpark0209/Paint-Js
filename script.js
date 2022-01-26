@@ -8,7 +8,7 @@ const reset = document.querySelector("#jsReset");
 const save = document.querySelector("#jsSave");
 const INITIAL_COLOR = "#000000";
 
-canvas.width = 700;
+canvas.width = 1000;
 canvas.height = 700;
 
 //load가 되면 bg가 white로 설정
